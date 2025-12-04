@@ -12,6 +12,7 @@ export default function Navbar() {
         { name: "Features", href: "#features" },
         { name: "Pricing", href: "#Pricing" },
         { name: "Testimonials", href: "#Testimonials" },
+        { name: "Sign Up", href: "/signup", isButton: true },
     ];
     
     // Function to close the menu (used when a link is clicked)
@@ -19,7 +20,7 @@ export default function Navbar() {
 
     return (
         // Fixed Navbar Container with semi-transparent background and blur
-        <nav className="fixed top-0 w-full z-50 bg-slate-950/20 backdrop-blur-sm shadow-lg">
+        <nav className="fixed top-0 w-full z-50 bg-slate-900 backdrop-blur-sm shadow-lg">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     
@@ -36,7 +37,9 @@ export default function Navbar() {
                             <a 
                                 key={link.name}
                                 href={link.href} 
-                                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition duration-150 hover:bg-gray-800"
+                                className={
+                                link.isButton ?"bg-blue-600 hover:bg-blue-700 text-gray-300 font-semibold py-2 px-4 rounded-lg transition duration-300"
+                                : "text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition duration-150 hover:bg-blue-700"}
                             >
                                 {link.name}
                             </a>
@@ -69,7 +72,9 @@ export default function Navbar() {
                                 key={link.name}
                                 href={link.href}
                                 onClick={closeMenu} // Closes menu when link is clicked
-                                className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white transition duration-150"
+                                className={
+                                    link.isButton ? "block px-3 py-2 rounded-md text-base font-medium bg-blue-600 text-gray-300 hover:bg-blue-700 transition duration-300" :
+                                    "block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-blue-700 hover:text-white transition duration-150"}
                             >
                                 {link.name}
                             </a>

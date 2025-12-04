@@ -9,14 +9,10 @@ import HomePage from './pages/landingpage/Home';
 function App() {
   return (
     <BrowserRouter>
-      <div className="flex flex-col min-h-screen bg-slate-900 text-white overflow-x-hidden">
+      <div className="flex flex-col min-h-screen  text-white overflow-x-hidden">
         
         <Navbar />
 
-        {/* 🚨 KEY CHANGE HERE: Added pt-20 to push content down 
-           pt-20 is 5rem (80px), which should clear your fixed Navbar. 
-           You might need to adjust this value (e.g., pt-16) depending on your Navbar's exact height.
-        */}
         <main className="flex-grow pt-20"> 
           <Routes>
             <Route path="/" element={<HomePage />} />
