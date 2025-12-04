@@ -157,8 +157,8 @@ export default function SignUp() {
         </div>
 
         {/* Footer small text */}
-        <div className="mt-6 text-center text-sm text-slate-400">
-          Already have an account? <a href="#" className="text-indigo-300 hover:underline">Sign in</a>
+        <div className="mt-6 text-center text-sm text-black">
+          Already have an account?   <a href="/signin" className="text-black-600 hover:underline">Sign in</a>
         </div>
       </div>
     </div>
