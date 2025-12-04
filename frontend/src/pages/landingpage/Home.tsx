@@ -1,40 +1,82 @@
+import React from "react";
 import HeroImage from "../../assets/heroimage.webp";
 
-
 function HomePage() {
-   return (
-    
-      <>
-      {/* 1 Menu */}
-      <div style={{ backgroundImage: `url(${HeroImage})` }} 
-      className="bg-center bg-cover     w-full flex items-center justify-center lg:h-200 lg:w-200 lg:mx-auto">
+  return (
+    <>
+      {/* Hero Section   */}
+      <div
+        style={{ backgroundImage: `url(${HeroImage})` }}
+        className="relative bg-center bg-no-repeat bg-contain"
+      >
+         
+        <div className="absolute inset-0 bg-blue"></div>
 
-        <div className="flex flex-col lg:flex-row       mx-auto">
-            {/* left section */}
-            <section className="text-black   lg:mb-0"> 
-               <h3 className="text-4xl font-bold">Take Control Of Your Finances</h3>
-               <p className="text-xl mt-2">Effortlessly Track, Manage and optimise your spending</p>
+         
+        <div className="relative max-w-7xl mx-auto px-6 py-20">
+           
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            {/* LEFT: content + illustration */}
+            <section className="flex-1 flex flex-col justify-center text-center md:text-left">
+              <div>
+                <h1 className="text-4xl sm:text-6xl font-extrabold text-gray-900">
+                  Take Control Of Your Finances
+                </h1>
+                <p className="mt-4 text-2xl text-gray-600 max-w-xl mx-auto md:mx-0">
+                  Effortlessly track, manage and optimize your spending
+                </p>
+              </div>
             </section>
-           {/* right section */}
-         <section className="lg:w-4/12 flex justify-center items-center p-4">
-            <div className="bg-white p-6 rounded-lg shadow-xl w-full max-w-sm">
-            <input type="email" placeholder="Email Address" className="w-full border p-2 mb-3 rounded" />
-            <input type="password" placeholder="Password" className="w-full border p-2 mb-3 rounded" />
-            <button className="w-full bg-green-500 text-white p-2 rounded hover:bg-green-600 font-semibold">
-                   Start Free Trial
-           </button>
-        <p className="text-xs text-gray-500 text-center mt-2">No credit card required</p>
-      </div>
-         </section>
-         </div>
-         
-      </div>
-      <p className="text-black">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis assumenda quo beatae ipsam necessitatibus officiis quaerat aperiam sapiente eaque quam commodi placeat enim quod veniam maxime, rem itaque quas? Adipisci?
-         
 
+            {/* RIGHT: login card */}
+            <section className="flex-1 flex justify-center items-center">
+  <div className="w-full max-w-sm bg-white/95 backdrop-blur-sm border border-gray-200 rounded-lg p-6 shadow inset-shadow-sm inset-shadow-blue-700">
+    <form className="space-y-4">
+      <div>
+        <input
+          type="email"
+          placeholder="Email Address"
+          className="block w-full text-black rounded border border-gray-200 p-2 text-sm focus:outline-none "
+        />
+      </div>
+
+      <div>
+        <input
+          type="password"
+          placeholder="Password"
+          className="block w-full text-black rounded border border-gray-200 p-2 text-sm focus:outline-none "
+        />
+      </div>
+
+      <button
+        type="submit"
+        className="w-full py-2.5 inset-shadow-sm inset-shadow-blue-700 rounded bg-blue-400  shadow-xl shadow-blue-700  text-white font-semibold hover:bg-blue-700"
+      >
+        Start Free Trial
+      </button>
+
+      <p className="text-center text-xs text-gray-500 mt-2">
+        No credit card required
       </p>
-      </>
-   );
+    </form>
+  </div>
+</section>
+
+          </div>
+        </div>
+      </div>
+
+      {/* Extra content below hero (keeps page flow) */}
+      <div className="max-w-7xl mx-auto px-6 py-8">
+        <p className="text-gray-700">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis
+          assumenda quo beatae ipsam necessitatibus officiis quaerat aperiam
+          sapiente eaque quam commodi placeat enim quod veniam maxime, rem itaque
+          quas? Adipisci?
+        </p>
+      </div>
+    </>
+  );
 }
 
-export default HomePage;  
+export default HomePage;

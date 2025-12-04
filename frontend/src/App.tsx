@@ -1,6 +1,8 @@
 import React from 'react';
 import Navbar from './components/navbar/navbar'; 
 import Footer from './components/footer/footer'; 
+import SignIn from './components/auth/login';
+import SignUp from './components/auth/signup';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/landingpage/Home';
 
@@ -17,6 +19,8 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             {/* ... other routes */}
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/signup" element={<SignUp />} />
           </Routes>
            
         </main>

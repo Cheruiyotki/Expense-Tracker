@@ -20,14 +20,14 @@ export default function Navbar() {
 
     return (
         // Fixed Navbar Container with semi-transparent background and blur
-        <nav className="fixed top-0 w-full z-50 bg-slate-900 backdrop-blur-sm shadow-lg">
+        <nav className="fixed top-3  rounded-2xl left-4 right-4   p-2  z-50 bg-slate-90 backdrop-blur-sm shadow-lg shadow inset-shadow-sm inset-shadow-blue-700">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     
                     {/* Logo/Brand Name */}
                     <div className="flex-shrink-0">
-                        <a href="/" className="text-white text-xl font-bold hover:text-blue-400 transition duration-150">
-                            Your Brand
+                        <a href="/" className="text-black text-xl font-bold hover:text-blue-400 transition duration-150">
+                            <span className="text-blue-700 bold"> my</span>Tracker
                         </a>
                     </div>
                     
@@ -38,8 +38,8 @@ export default function Navbar() {
                                 key={link.name}
                                 href={link.href} 
                                 className={
-                                link.isButton ?"bg-blue-600 hover:bg-blue-700 text-gray-300 font-semibold py-2 px-4 rounded-lg transition duration-300"
-                                : "text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition duration-150 hover:bg-blue-700"}
+                                link.isButton ?"bg-blue-300 right-4 hover:bg-blue-600 inset-shadow-sm inset-shadow-blue-700  shadow-xl shadow-blue-700 hover:text-blue-400 text-black font-semibold py-2 px-4 rounded-lg transition duration-300"
+                                : "text-black hover:text-blue-400 px-3 py-2  rounded-md text-base font-medium transition duration-150  "}
                             >
                                 {link.name}
                             </a>
@@ -53,9 +53,9 @@ export default function Navbar() {
                         aria-expanded={mobileMenuIsOpen}
                     >
                         {mobileMenuIsOpen ? (
-                            <X className="w-6 h-6" /> // X Icon when menu is open
+                            <X className="text-black w-6 h-6" /> // X Icon when menu is open
                         ) : (
-                            <Menu className="w-6 h-6" /> // Menu Icon when menu is closed
+                            <Menu className="text-black w-6 h-6" /> // Menu Icon when menu is closed
                         )}
                     </button>
                 </div>
@@ -64,7 +64,7 @@ export default function Navbar() {
             {/* Mobile Menu Panel (Conditionally Rendered) */}
             {mobileMenuIsOpen && (
                 <div 
-                    className="md:hidden bg-slate-900 border-t border-gray-800 pb-2"
+                    className="md:hidden text-black  border-t border-gray-800 pb-2"
                 >
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                         {navLinks.map((link) => (
@@ -73,8 +73,8 @@ export default function Navbar() {
                                 href={link.href}
                                 onClick={closeMenu} // Closes menu when link is clicked
                                 className={
-                                    link.isButton ? "block px-3 py-2 rounded-md text-base font-medium bg-blue-600 text-gray-300 hover:bg-blue-700 transition duration-300" :
-                                    "block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:bg-blue-700 hover:text-white transition duration-150"}
+                                    link.isButton ? "block hover:bg-blue-300 bg-blue-200 rounded-2xl left-4 right   p-2  z-50 bg-slate-90 backdrop-blur-sm shadow-lg shadow inset-shadow-sm inset-shadow-blue-700 " :
+                                    "block rounded-2xl left-4 right-40   p-2  z-50 bg-slate-90 backdrop-blur-sm shadow-lg shadow inset-shadow-sm inset-shadow-blue-700"}
                             >
                                 {link.name}
                             </a>
