@@ -11,7 +11,7 @@ import HomePage from './pages/landingpage/Home';
 function App() {
   return (
     <BrowserRouter>
-      <div className="flex flex-col min-h-screen  text-white overflow-x-hidden">
+      <div className="flex flex-col min-h-screen bg-green-100 text-black overflow-x-hidden">
         
         <Navbar />
 

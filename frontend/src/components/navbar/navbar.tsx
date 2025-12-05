@@ -20,7 +20,7 @@ export default function Navbar() {
 
     return (
         // Fixed Navbar Container with semi-transparent background and blur
-        <nav className="fixed top-3  rounded-2xl left-4 right-4   p-2  z-50 bg-slate-90 backdrop-blur-sm shadow-lg shadow inset-shadow-sm inset-shadow-blue-700">
+        <nav className="fixed top-3  rounded-2xl left-4 right-4   p-2  z-50 bg-slate-90 backdrop-blur-sm shadow-lg shadow inset-shadow-sm inset-shadow-green-700">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     
@@ -38,8 +38,8 @@ export default function Navbar() {
                                 key={link.name}
                                 href={link.href} 
                                 className={
-                                link.isButton ?"bg-blue-300 right-4 hover:bg-blue-600 inset-shadow-sm inset-shadow-blue-700  shadow-xl shadow-blue-700 hover:text-blue-400 text-black font-semibold py-2 px-4 rounded-lg transition duration-300"
-                                : "text-black hover:text-blue-400 px-3 py-2  rounded-md text-base font-medium transition duration-150  "}
+                                link.isButton ?"bg-green-300 right-4 hover:bg-green-600 inset-shadow-sm inset-shadow-green-700  shadow-xl shadow-green-700  text-black font-semibold py-2 px-4 rounded-lg transition duration-300"
+                                : "text-black hover:text-green-400 px-3 py-2  rounded-md text-base font-medium transition duration-150  "}
                             >
                                 {link.name}
                             </a>
@@ -73,8 +73,8 @@ export default function Navbar() {
                                 href={link.href}
                                 onClick={closeMenu} // Closes menu when link is clicked
                                 className={
-                                    link.isButton ? "block hover:bg-blue-300 bg-blue-200 rounded-2xl left-4 right   p-2  z-50 bg-slate-90 backdrop-blur-sm shadow-lg shadow inset-shadow-sm inset-shadow-blue-700 " :
-                                    "block rounded-2xl left-4 right-40   p-2  z-50 bg-slate-90 backdrop-blur-sm shadow-lg shadow inset-shadow-sm inset-shadow-blue-700"}
+                                    link.isButton ? "block hover:bg-green-300 bg-blue-200 rounded-2xl left-4 right   p-2  z-50 bg-slate-90 backdrop-blur-sm shadow-lg shadow inset-shadow-sm inset-shadow-green-700 " :
+                                    "block rounded-2xl left-4 right-40   p-2  z-50 bg-slate-90 backdrop-blur-sm shadow-lg shadow inset-shadow-sm inset-shadow-green-700"}
                             >
                                 {link.name}
                             </a>

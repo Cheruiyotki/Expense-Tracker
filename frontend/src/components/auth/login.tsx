@@ -22,7 +22,7 @@ export default function SignIn() {
         </div>
 
         {/* Card */}
-        <div className="inset-shadow-sm inset-shadow-blue-700  shadow-xl shadow-blue-700 backdrop-blur-md border border-slate-700 rounded-2xl shadow-xl p-6">
+        <div className="inset-shadow-sm inset-shadow-blue-700 bg-white/9  shadow-xl shadow-blue-700 backdrop-blur-md border border-slate-700 rounded-2xl shadow-xl p-6">
           <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
             {/* Email */}
             <div>
