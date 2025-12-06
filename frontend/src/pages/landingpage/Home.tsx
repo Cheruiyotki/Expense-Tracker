@@ -141,11 +141,11 @@ function HomePage() {
             <span className="text-sm text-black">USD <span className="block text-xs">per month</span></span>
           </div>
 
-          <button className="mt-6 inline-block px-4 py-2 rounded-md bg-indigo-500 hover:bg-indigo-600 text-white font-medium">
+          <button className="mt-6 inline-block px-4 py-2 rounded-md bg-green-400 hover:bg-green-600 text-white font-medium">
             Start a free trial
           </button>
 
-          <p className="mt-6 text-slate-200 font-medium">Start selling with:</p>
+          <p className="mt-6 text-black font-medium">Start selling with:</p>
           <ul className="mt-4 space-y-3 text-slate-300">
             <li className="flex items-start gap-3">
               <span className="mt-1 text-slate-500">+</span>
@@ -183,11 +183,11 @@ function HomePage() {
             <span className="text-sm text-black">USD <span className="block text-xs">per month</span></span>
           </div>
 
-          <button className="mt-6 inline-block px-4 py-2 rounded-md bg-indigo-500 hover:bg-indigo-600 text-white font-medium">
+          <button className="mt-6 inline-block px-4 py-2 rounded-md bg-green-400 hover:bg-green-600 text-white font-medium">
             Start a free trial
           </button>
 
-          <p className="mt-6 text-slate-200 font-medium">Start selling with:</p>
+          <p className="mt-6 text-black font-medium">Start selling with:</p>
           <ul className="mt-4 space-y-3 text-slate-300">
             <li className="flex items-start gap-3">
               <span className="mt-1 text-slate-500">+</span>
@@ -215,21 +215,21 @@ function HomePage() {
       </div>
 
       {/* <!-- Card --> */}
-      <div className="pricing-card w-full py-2.5 inset-shadow-sm inset-shadow-green-700 rounded bg-green-300  shadow-xl shadow-green-700  text-white font-semibold">
+      <div className="pricing-card w-full py-2.5 inset-shadow-sm inset-shadow-green-700 rounded bg-green-200  shadow-xl shadow-green-700  text-white font-semibold">
         <div className="p-8">
-          <h3 className="text-sm font-semibold text-indigo-300">Growth</h3>
-          <p className="text-slate-400 mt-2 mb-6">All the extras for your growing team.</p>
+          <h3 className="text-sm font-semibold text-black">Growth</h3>
+          <p className="text-black mt-2 mb-6">All the extras for your growing team.</p>
 
           <div className="flex items-baseline gap-3">
             <span className="text-4xl font-extrabold text-white">$49</span>
-            <span className="text-sm text-slate-400">USD <span className="block text-xs">per month</span></span>
+            <span className="text-sm text-slate-400">USD <span className="block text-black text-xs">per month</span></span>
           </div>
 
-          <button className="mt-6 inline-block px-4 py-2 rounded-md bg-indigo-500 hover:bg-indigo-600 text-white font-medium">
+          <button className="mt-6 inline-block px-4 py-2 rounded-md bg-green-400 hover:bg-green-600 text-white font-medium">
             Start a free trial
           </button>
 
-          <p className="mt-6 text-slate-300 font-medium">Start selling with:</p>
+          <p className="mt-6 text-black font-medium">Start selling with:</p>
           <ul className="mt-4 space-y-3 text-slate-400">
             <li className="flex items-start gap-3">
               <span className="mt-1 text-slate-500">+</span>
@@ -256,21 +256,21 @@ function HomePage() {
       </div>
 
       {/* <!-- Card --> */}
-      <div className="pricing-card w-full py-2.5 inset-shadow-sm inset-shadow-blue-700 rounded bg-blue-400  shadow-xl shadow-blue-700  text-white font-semibold">
+      <div className="pricing-card w-full py-2.5 inset-shadow-sm inset-shadow-green-700 rounded bg-green-200  shadow-xl shadow-green-700  text-white font-semibold">
         <div className="p-8">
-          <h3 className="text-sm font-semibold text-indigo-300">Scale</h3>
-          <p className="text-slate-400 mt-2 mb-6">Added flexibility at scale.</p>
+          <h3 className="text-sm font-semibold text-black">Scale</h3>
+          <p className="text-black mt-2 mb-6">Added flexibility at scale.</p>
 
           <div className="flex items-baseline gap-3">
             <span className="text-4xl font-extrabold text-white">$99</span>
-            <span className="text-sm text-slate-400">USD <span className="block text-xs">per month</span></span>
+            <span className="text-sm text-slate-400">USD <span className="block text-black text-xs">per month</span></span>
           </div>
 
-          <button className="mt-6 inline-block px-4 py-2 rounded-md bg-indigo-500 hover:bg-indigo-600 text-white font-medium">
+          <button className="mt-6 inline-block px-4 py-2 rounded-md bg-green-400 hover:bg-green-600 text-white font-medium">
             Start a free trial
           </button>
 
-          <p className="mt-6 text-slate-300 font-medium">Start selling with:</p>
+          <p className="mt-6 text-black font-medium">Start selling with:</p>
           <ul className="mt-4 space-y-3 text-slate-400">
             <li className="flex items-start gap-3">
               <span className="mt-1 text-slate-500">+</span>

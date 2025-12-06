@@ -5,6 +5,7 @@ import SignIn from './components/auth/login';
 import SignUp from './components/auth/signup';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/landingpage/Home';
+import LandingPage from './pages/landingpage/landingpage';
 
 // ... imports
 
@@ -21,6 +22,7 @@ function App() {
             {/* ... other routes */}
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/landing" element={<LandingPage />} />
           </Routes>
            
         </main>
