@@ -1,6 +1,74 @@
+import { getPool } from "../db/config";
+
+import * as expenseService from "../repositories/expense.repositories";
+import { newExpense, uupdateExpense } from "../types/expense.types";
+
+export const listExpenses = async () => await expenseService.getExpenses();
+export const createExpense = async (newexpense: newExpense) => await expenseService.addExpense(newexpense);
 
 
-import * as expsenseService from "../repositories/expense.repositories";
+export const getExpense = async (id:number) => {
+     if (isNaN(id)) {
+        throw new Error('Invalid expense ID');
+    }
+    const existingExpense = await expenseService.getExpenseById(id);
+    if (!existingExpense) {
+        throw new Error('Expense not found');
+    }
+    return existingExpense;
+}
 
-export const listExpenses = async () => await expsenseService.getExpenses();
-export const createExpense = async (newexpense:any) => await expsenseService.addExpense(newexpense);
+export const deleteExpense = async (id:number) =>  {
+    if (isNaN(id)) {
+        throw new Error('Invalid expense ID');
+    }
+    
+    const existingExpense = await expenseService.getExpenseById(id);
+     if (!existingExpense) {
+        throw new Error('Expense not found');
+    }
+    return await expenseService.deleteExpenseById(id);
+}    
+
+ 
+
+export const updateExpense = async (id: number, updateData:  uupdateExpense) => {
+    if (isNaN(id)) {
+        throw new Error('Invalid expense ID');
+    }
+
+    const pool = await getPool();
+
+    
+    const existing = await pool.query(
+        "SELECT * FROM expenses WHERE expense_id = $1",
+        [id]
+    );
+
+    if (existing.rows.length === 0) {
+        throw new Error("Expense not found");
+    }
+
+     
+    const { amount, category_id, expense_date, description } = updateData;
+
+    const updated = await pool.query(
+        `UPDATE expenses 
+         SET 
+            amount = COALESCE($1, amount),
+            category_id = COALESCE($2, category_id),
+            expense_date = COALESCE($3, expense_date),
+            description = COALESCE($4, description)
+         WHERE expense_id = $5
+         RETURNING *`,
+        [
+            amount,          
+            category_id,     
+            expense_date,     
+            description,     
+            id               
+        ]
+    );
+
+    return updated.rows[0];
+};
