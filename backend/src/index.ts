@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import { getPool } from './db/config';
 import expenseRoutes from './router/expense.router';
+import userRouter from './router/user.router';
 
 dotenv.config();
 
@@ -18,6 +19,8 @@ app.get('/', (_, res) => {
 
 // Expense routes
 expenseRoutes(app);
+
+userRouter(app);
  
 
 const port = process.env.PORT || 4000;

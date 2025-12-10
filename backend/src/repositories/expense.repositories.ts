@@ -50,3 +50,13 @@ export const updateExpense = async (req: Request, res: Response) => {
     [category_id, amount, expense_date, description, id]);
     return { message: 'Expense updated successfully' };
 }
+
+const ExpenseRepository = {
+    getExpenses,
+    addExpense,
+    getExpenseById,
+    deleteExpenseById,
+    updateExpense,
+};
+
+export default ExpenseRepository;

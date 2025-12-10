@@ -4,7 +4,15 @@ import * as expenseService from "../repositories/expense.repositories";
 import { newExpense, uupdateExpense } from "../types/expense.types";
 
 export const listExpenses = async () => await expenseService.getExpenses();
-export const createExpense = async (newexpense: newExpense) => await expenseService.addExpense(newexpense);
+export const createExpense = async (newexpense: newExpense) => {
+     
+    if (newexpense.amount <= 0) {
+        throw new Error('Expense amount must be a positive number.'); // Must match the string in the test
+    }
+    
+    
+    return expenseService.addExpense(newexpense);
+};
 
 
 export const getExpense = async (id:number) => {
@@ -72,3 +80,14 @@ export const updateExpense = async (id: number, updateData:  uupdateExpense) => 
 
     return updated.rows[0];
 };
+
+const ExpenseService = {
+    listExpenses,
+    createExpense,
+    getExpense,
+    deleteExpense,
+    updateExpense,
+};
+
+ 
+export default ExpenseService;
