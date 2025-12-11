@@ -121,6 +121,17 @@ function HomePage() {
 </section>
   
 
+  <section className="py-12 bg-green-200 from-indigo-50 to-rose-50 dark:from-slate-800 dark:to-slate-700 rounded-xl px-6">
+          <div className="max-w-3xl mx-auto text-center py-10">
+            <h4 className="text-2x  font-bold">Ready to take control of your money?</h4>
+            <p className="mt-2 text-black  ">Create an account and start tracking in seconds. Free plan available.</p>
+            <div className="mt-6 flex items-center justify-center gap-4">
+              <a href="/signup" className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-md shadow">Create account</a>
+              <a href="/learn" className="text-sm px-4 py-3 rounded-md border">See how it works</a>
+            </div>
+          </div>
+        </section>
+
   {/* <!-- Pricing Section --> */}
 <section className="py-16 ">
   <div className="max-w-7xl mx-auto px-6">
@@ -301,8 +312,27 @@ function HomePage() {
  
 </section>
 
+{/* Testimonials */}
+        <section className="py-12">
+          <h3 className="text-2xl font-semibold mb-6">What people say</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Testimonial name="Martha" text="Saved so much after seeing where my money went." />
+            <Testimonial name="John" text="Quick add is a game-changer for busy days." />
+            <Testimonial name="Aisha" text="Budget alerts stopped my overspending." />
+          </div>
+        </section>
+
     </>
   );
+
+  function Testimonial({ name, text }) {
+  return (
+    <blockquote className="p-6 bg-white dark:bg-slate-800 rounded-xl ring-1 ring-slate-100 dark:ring-0">
+      <p className="text-sm text-slate-700 dark:text-slate-200">“{text}”</p>
+      <div className="mt-4 text-xs text-slate-500">— {name}</div>
+    </blockquote>
+  );
+}
 }
 
 export default HomePage;
